@@ -34,13 +34,12 @@ class _CategoryTabsWidgetState extends State<CategoryTabsWidget> {
                   .toList(),
               isScrollable: true,
             ),
-            NewsList(widget.sources[selectedIndex]),
+            // Expanded(child: NewsList(widget.sources[selectedIndex])),
             Expanded(
               child: TabBarView(
                 children: widget.sources.map((item) {
-                  return Center(
-                    child: Text('Content for ${item.name}'),
-                  );
+                  Color.fromARGB(0, 255, 255, 255);
+                  return NewsList(item);
                 }).toList(),
               ),
             ),
